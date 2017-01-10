@@ -1,0 +1,16 @@
+{
+  "name": "@webpack-blocks/eslint",
+  "version": "1.0.0",
+  "description": "webpack-block for eslint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-blocks",
+    "eslint"
+  ],
+  "author": "Martin Emmert",
+  "license": "ISC"
+}
