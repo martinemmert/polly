@@ -1,10 +1,6 @@
 const {webpack} = require("@webpack-blocks/webpack2");
 
-exports.basePlugins = [
-  new webpack.optimize.CommonsChunkPlugin({
-    name: ["vendor", "manifest"],
-  })
-];
+exports.basePlugins = [];
 
 exports.productionPlugins = [
   new webpack.LoaderOptionsPlugin({
