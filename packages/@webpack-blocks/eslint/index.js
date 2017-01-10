@@ -13,30 +13,30 @@ module.exports = eslint;
  */
 function eslint() {
 
-    let plugin = new webpack.LoaderOptionsPlugin({
-        options: {
-            eslint: {
-                configFile: "./.eslintrc",
-                cache: true,
-                failOnError: false,
-                failOnWarning: false,
-            },
-        },
-    });
+  let plugin = new webpack.LoaderOptionsPlugin({
+    options: {
+      eslint: {
+        configFile: ".eslintrc",
+        cache: true,
+        failOnError: false,
+        failOnWarning: false,
+      },
+    },
+  });
 
-    return (context, webpackConfig) => {
-        return {
-            module: {
-                loaders: [
-                    {
-                        enforce: "pre",
-                        test: /\.jsx?$/,
-                        loader: "eslint-loader",
-                        exclude: /node_modules/,
-                    },
-                ],
-            },
-            plugins: [plugin],
-        };
+  return () => {
+    return {
+      module: {
+        loaders: [
+          {
+            enforce: "pre",
+            test: /\.jsx?$/,
+            loader: "eslint-loader",
+            exclude: /node_modules/,
+          },
+        ],
+      },
+      plugins: [plugin],
     };
+  };
 }
