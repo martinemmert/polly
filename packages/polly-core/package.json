@@ -13,6 +13,9 @@
     "system",
     "game"
   ],
+  "devDependencies": {
+    "@webpack-blocks/eslint": "^1.0.0"
+  },
   "author": "Martin Emmert",
   "license": "ISC"
 }
