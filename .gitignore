@@ -9,5 +9,6 @@ thumbs.db
 
 # Project files
 dist/
+lib/
 node_modules/
 bower_modules/
