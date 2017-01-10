@@ -11,6 +11,9 @@
     "webpack-blocks",
     "eslint"
   ],
+  "devDependencies": {
+    "eslint-loader": "^1.6.1"
+  },
   "author": "Martin Emmert",
   "license": "ISC"
 }
