@@ -1,0 +1,13 @@
+# OS related
+.DS_Store
+thumbs.db
+
+# JetBrains IDEs
+.idea/
+*.ipr
+*.iws
+
+# Project files
+dist/
+node_modules/
+bower_modules/
