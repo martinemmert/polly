@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack --progress --watch --color --config webpack.config.js",
     "build": "NODE_ENV=production webpack --progress --color --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test ../../node_modules/.bin/mocha --require babel-register --colors --check-leaks ./test/*.spec.js",
+    "test-watching": "NODE_ENV=test ../../node_modules/.bin/mocha --require babel-register --colors --check-leaks -w ./test/*.spec.js",
+    "test-coverage": "NODE_ENV=test ../../node_modules/.bin/istanbul cover ../../node_modules/.bin/_mocha ./test/*.spec.js -- --require babel-register"
   },
   "keywords": [
     "ecs",
@@ -15,9 +17,6 @@
     "system",
     "game"
   ],
-  "devDependencies": {
-    "@webpack-blocks/eslint": "^1.0.0"
-  },
   "author": "Martin Emmert",
   "license": "ISC"
 }

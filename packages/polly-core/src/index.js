@@ -1,4 +1,2 @@
 // @flow
-export function Hi(): string {
-  return "Hello World!";
-}
+export * from "./foobar";
