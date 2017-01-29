@@ -27,6 +27,6 @@
     "signal-maps": "^0.1.0"
   },
   "devDependencies": {
-    "chai-spies": "^0.7.1"
+    
   }
 }
