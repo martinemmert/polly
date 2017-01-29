@@ -11,7 +11,7 @@ function __removeContextSignalCallbacks(system: System, context: Context): void 
 }
 
 function __addContextNodeSignalCallbacks(system: System, context: Context): void {
-  for (let node: EntityNode of context.nodes) {
+  for (let node: EntityNode of context.nodes.values()) {
     if (!system.requiredEntityNodes.includes(node.name)) continue;
     node.added.add(system._onEntityAdded);
     node.deleted.add(system._onEntityRemoved);
@@ -19,7 +19,7 @@ function __addContextNodeSignalCallbacks(system: System, context: Context): void
 }
 
 function __removeContextNodeSignalCallbacks(system: System, context: Context): void {
-  for (let node: EntityNode of context.nodes) {
+  for (let node: EntityNode of context.nodes.values()) {
     if (!system.requiredEntityNodes.includes(node.name)) continue;
     node.added.remove(system._onEntityAdded);
     node.deleted.remove(system._onEntityRemoved);
