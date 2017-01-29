@@ -13,16 +13,16 @@ function __removeContextSignalCallbacks(system: System, context: Context): void 
 function __addContextNodeSignalCallbacks(system: System, context: Context): void {
   for (let node: EntityNode of context.nodes.values()) {
     if (!system.requiredEntityNodes.includes(node.name)) continue;
-    node.added.add(system._onEntityAdded);
-    node.deleted.add(system._onEntityRemoved);
+    node.added.add(system._onEntityAdded, this);
+    node.deleted.add(system._onEntityRemoved, this);
   }
 }
 
 function __removeContextNodeSignalCallbacks(system: System, context: Context): void {
   for (let node: EntityNode of context.nodes.values()) {
     if (!system.requiredEntityNodes.includes(node.name)) continue;
-    node.added.remove(system._onEntityAdded);
-    node.deleted.remove(system._onEntityRemoved);
+    node.added.remove(system._onEntityAdded, this);
+    node.deleted.remove(system._onEntityRemoved, this);
   }
 }
 
