@@ -10,4 +10,5 @@ lerna.json
 
 [options]
 unsafe.enable_getters_and_setters=true
+proposal.export_star_as=true
 munge_underscores=true

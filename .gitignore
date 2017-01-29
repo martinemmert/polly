@@ -8,8 +8,8 @@ thumbs.db
 *.iws
 
 # Project files
-dist/
-lib/
-node_modules/
-bower_modules/
-coverage/
+dist
+lib
+node_modules
+bower_modules
+coverage

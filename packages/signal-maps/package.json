@@ -1,0 +1,21 @@
+{
+  "name": "signal-maps",
+  "version": "0.1.3",
+  "description": "JavaScript Map and WeakMap cooked up with Signals.",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "rm index.js && ../../node_modules/.bin/babel ./src --out-dir ."
+  },
+  "keywords": [
+    "signals",
+    "map",
+    "weakmap"
+  ],
+  "author": "Martin Emmert",
+  "license": "MIT",
+  "dependencies": {
+    "min-signal": "0.0.6"
+  }
+}

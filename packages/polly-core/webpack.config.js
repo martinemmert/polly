@@ -1,6 +1,7 @@
 const {
   addPlugins,
   createConfig,
+  customConfig,
   defineConstants,
   entryPoint,
   setOutput,
@@ -14,11 +15,17 @@ let config = createConfig([
   defineConstants({"process.env.NODE_ENV": process.env.NODE_ENV || "development"}),
   entryPoint("./src/index"),
   setOutput({
-    path: __dirname + "/lib",
+    path: __dirname + "/dist",
     filename: "polly-core.js",
     library: "polly-core",
     libraryTarget: "umd",
     umdNamedDefine: true,
+  }),
+  customConfig({
+    externals: {
+      "min-signal": "min-signal",
+      "signal-maps": "signal-maps"
+    }
   }),
   eslint(),
   babel({presets: ["es2015"], plugins: ["transform-flow-strip-types"]}),
