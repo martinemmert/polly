@@ -7,7 +7,7 @@ function __addToEntityNodes(context: Context, entity: Entity): void {
   for (let node: EntityNode of context.nodes.values()) {
     let requiredComponents: Array<string> = node.requiredComponents;
     let requirementsMet: boolean = requiredComponents.every(componentType => {
-      entity.has(componentType);
+      return entity.has(componentType);
     });
     if (requirementsMet && !node.has(entity.id)) {
       node.set(entity.id, entity);
@@ -19,7 +19,7 @@ function __removeFromEntityNodes(context: Context, entity: Entity): void {
   for (let node: EntityNode of context.nodes()) {
     let requiredComponents: Array<string> = node.requiredComponents;
     let requirementsMet: boolean = requiredComponents.every(componentType => {
-      entity.has(componentType);
+      return entity.has(componentType);
     });
     if (requirementsMet && node.has(entity.id)) {
       node.delete(entity.id);
