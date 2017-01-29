@@ -9,7 +9,7 @@ const {
 } = require("@webpack-blocks/webpack2");
 const babel = require("@webpack-blocks/babel6");
 const eslint = require("@webpack-blocks/eslint");
-const plugins = require("./webpack.plugins");
+const plugins = require("./webpack.plugins.js");
 
 let config = createConfig([
   defineConstants({"process.env.NODE_ENV": process.env.NODE_ENV || "development"}),
