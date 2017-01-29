@@ -1,6 +1,6 @@
 {
-  "name": "@webpack-blocks/eslint",
-  "version": "1.0.5",
+  "name": "webpack-blocks-eslint",
+  "version": "1.0.0",
   "description": "webpack-block for eslint",
   "main": "index.js",
   "scripts": {
