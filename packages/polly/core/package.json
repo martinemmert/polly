@@ -11,7 +11,22 @@
     "test": "NODE_ENV=test ../../../node_modules/.bin/mocha --require babel-register --colors --check-leaks ./test/*.spec.js",
     "test:watch": "NODE_ENV=test ../../../node_modules/.bin/mocha --require babel-register --colors --check-leaks -w ./test/*.spec.js",
     "test:coverage": "NODE_ENV=test ../../../node_modules/.bin/istanbul cover ../../../node_modules/.bin/_mocha ./test/*.spec.js -- --require babel-register",
-    "prepublish": "npm run build:dist && npm run build:lib"
+    "doc": "../../../node_modules/.bin/esdoc",
+    "prepublish": "npm run doc && npm run build:dist && npm run build:lib"
+  },
+  "esdoc": {
+    "source": "./src",
+    "destination": "./doc",
+    "test": {
+      "type": "mocha",
+      "source": "./test"
+    },
+    "access": ["public", "protected"],
+    "autoPrivate": true,
+    "package": "./package.json",
+    "plugins": [{
+      "name": "esdoc-flow-plugin"
+    }]
   },
   "keywords": [
     "ecs",
