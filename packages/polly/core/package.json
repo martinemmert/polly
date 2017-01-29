@@ -1,6 +1,6 @@
 {
   "name": "polly-core",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "yet another entity component system",
   "main": "./lib/index.js",
   "module": "./lib",
@@ -21,12 +21,17 @@
       "type": "mocha",
       "source": "./test"
     },
-    "access": ["public", "protected"],
+    "access": [
+      "public",
+      "protected"
+    ],
     "autoPrivate": true,
     "package": "./package.json",
-    "plugins": [{
-      "name": "esdoc-flow-plugin"
-    }]
+    "plugins": [
+      {
+        "name": "esdoc-flow-plugin"
+      }
+    ]
   },
   "keywords": [
     "ecs",
