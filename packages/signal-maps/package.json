@@ -1,6 +1,6 @@
 {
   "name": "signal-maps",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "JavaScript Map and WeakMap cooked up with Signals.",
   "main": "index.js",
   "module": "index.js",

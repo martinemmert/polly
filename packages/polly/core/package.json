@@ -1,6 +1,6 @@
 {
   "name": "polly-core",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "yet another entity component system",
   "main": "./lib/index.js",
   "module": "./lib",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "min-signal": "^0.0.6",
-    "signal-maps": "^0.1.0"
+    "signal-maps": "^0.1.5"
   },
   "devDependencies": {}
 }
