@@ -4,7 +4,8 @@
   "description": "webpack-block for eslint",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "rm index.js && ../../../node_modules/.bin/babel ./src --out-dir ."
   },
   "keywords": [
     "webpack",
@@ -15,5 +16,5 @@
     "eslint-loader": "^1.6.1"
   },
   "author": "Martin Emmert",
-  "license": "ISC"
+  "license": "MIT"
 }
