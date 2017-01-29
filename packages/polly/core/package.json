@@ -1,6 +1,6 @@
 {
   "name": "polly-core",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "yet another entity component system",
   "main": "./lib/index.js",
   "module": "./lib",
