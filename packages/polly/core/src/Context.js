@@ -4,7 +4,7 @@ import {SignalMap} from "signal-maps";
 import type {System, Entity, EntityNode} from "./";
 
 function __addToEntityNodes(context: Context, entity: Entity): void {
-  for (let node: EntityNode of context.nodes) {
+  for (let node: EntityNode of context.nodes.values()) {
     let requiredComponents: Array<string> = node.requiredComponents;
     let requirementsMet: boolean = requiredComponents.every(componentType => {
       entity.has(componentType);
@@ -16,7 +16,7 @@ function __addToEntityNodes(context: Context, entity: Entity): void {
 }
 
 function __removeFromEntityNodes(context: Context, entity: Entity): void {
-  for (let node: EntityNode of context.nodes) {
+  for (let node: EntityNode of context.nodes()) {
     let requiredComponents: Array<string> = node.requiredComponents;
     let requirementsMet: boolean = requiredComponents.every(componentType => {
       entity.has(componentType);
